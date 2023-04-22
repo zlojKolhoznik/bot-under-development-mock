@@ -11,6 +11,8 @@ var receiverOptions = new ReceiverOptions
 };
 
 botClient.StartReceiving(HandleUpdatesAsync, HandleErrorsAsync, receiverOptions, cts.Token);
+Console.WriteLine("Press Enter to stop the bot . . .");
+Console.ReadLine();
 
 Task HandleErrorsAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
 {
